@@ -1,0 +1,124 @@
+Estilizador Dinâmico de Botão
+
+Este projeto é um Estilizador Dinâmico de Botão onde os usuários podem manipular os estilos de um botão através de um painel de controle. As alterações são aplicadas em tempo real e as configurações são salvas no localStorage, permitindo que elas persistam mesmo após o recarregamento da página.
+
+🚀 Funcionalidades
+
+Alterar cor de fundo, altura, largura, texto, borda e mais.
+
+Visualizar o CSS gerado em tempo real.
+
+Salvar os estilos personalizados no localStorage para persistência.
+
+Painel de controle interativo, permitindo aos usuários personalizar o botão com facilidade.
+
+
+🛠️ Tecnologias Utilizadas
+
+HTML5: Para a estrutura da página.
+
+CSS3: Estilização básica do painel e do botão.
+
+JavaScript (ES6): Manipulação do DOM, eventos, e armazenamento no localStorage.
+
+📚 Como Funciona
+
+O projeto permite que os usuários alterem dinamicamente os estilos de um botão através de campos de entrada (como cor, dimensões e texto). O objeto handleStyle mapeia diferentes propriedades de estilo para funções que as aplicam ao botão. Todas as mudanças são salvas no localStorage, garantindo que as alterações persistam mesmo após recarregar a página.
+
+Exemplo de manipulação de estilos:
+
+handleStyle = {
+  backgroundColor(value) {
+    this.element.style.backgroundColor = value;
+  },
+  height(value) {
+    this.element.style.height = value + "px";
+  },
+  // Outros manipuladores de estilo...
+};
+
+Exibição do CSS em tempo real
+
+A função showCss() pega os estilos inline do botão e os exibe na página, permitindo que os usuários vejam o CSS aplicado:
+
+function showCss() {
+  cssText.innerHTML =
+    "<span>" + btn.style.cssText.split("; ").join(";</span><span>") + ";</span>";
+}
+
+🖥️ Começando
+
+Pré-requisitos
+
+Antes de começar, certifique-se de que você atenda aos seguintes requisitos:
+
+Um navegador moderno que suporte ES6.
+
+Não é necessário instalar nenhum software adicional.
+
+
+Instalação
+
+1. Clone o repositório:
+
+git clone https://github.com/evandrolima7/estilizador-dinamico-botao.git
+
+
+2. Navegue até o diretório do projeto:
+
+cd estilizador-dinamico-botao
+
+
+3. Abra o arquivo index.html no navegador:
+
+open index.html
+
+
+
+Uso
+
+1. Abra a página no navegador.
+
+
+2. Utilize os controles para manipular os estilos do botão.
+
+
+3. O preview do CSS será atualizado com os estilos atuais do botão.
+
+
+4. Suas mudanças serão salvas automaticamente e recarregadas na próxima vez que abrir a página.
+
+
+
+Exemplo de Fluxo de Trabalho
+
+1. Altere a cor de fundo do botão.
+
+
+2. Ajuste a altura e a largura conforme desejado.
+
+
+3. Modifique a borda ou o texto dinamicamente.
+
+
+4. Veja o preview do CSS se atualizar a cada mudança.
+
+
+🚧 Melhorias Futuras
+
+Mais controles: Expandir o projeto para permitir a manipulação de outras propriedades CSS, como sombras, transformações de texto ou padding.
+
+Integração com color picker: Implementar um seletor de cores para facilitar a escolha de cores.
+
+Exportar CSS: Adicionar a opção de exportar o CSS gerado como um arquivo ou copiá-lo para a área de transferência.
+
+
+💡 Lições Aprendidas
+
+Este projeto reforçou os seguintes conceitos:
+
+Uso da API localStorage para persistência de dados no navegador.
+
+Manipulação de eventos change e atualização dinâmica do DOM.
+
+Estruturação de código modular e reutilizável para facilitar a manutenção
